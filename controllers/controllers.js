@@ -75,7 +75,7 @@ async function updateData(req, res) {
     const id = getIdAndCheck(req)
     const data = await Model.findByIdAndUpdate({ _id: id }, { dataBody })
     const updatedData = await Model.findById({ _id: id })
-    handleQuizNotFound(res, data)
+    handleDataNotFound(res, data)
 
     res
       .status(200)
