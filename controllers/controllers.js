@@ -18,7 +18,7 @@ async function getPersonalData(req, res) {
     user: { email },
   } = req
   console.log(email)
-  // Add email to find, and it will show just personal quizzes
+  // Add email to find, and it will show just personal 
   try {
     const dataList = await Model.find({ user: email }).sort({ createdAt: -1 })
     res.status(200).json(dataList)
