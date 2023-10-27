@@ -21,11 +21,13 @@ app.use((req, _, next) => {
   next()
 })
 
+// routes
+// users
+app.use("/api/users", userRoutes)
+
 const apiPathName = "data"
 const fullPath = `/api/${apiPathName}/`
-
-//routes
-app.use("/api/users", userRoutes)
+// data
 app.use(fullPath, yourRoutes)
 
 // connect to db and start the server
